@@ -3,13 +3,13 @@
 # Usage example:
 
 # Single sample:
-# bash ~/HGM_MG_sample_analyzer.sh ~/loomba17_study/samples/SRR5275394_1.fastq.gz ~/GIF_DBs/acetolac_seqs_lenfil_fil.dmnd
+# bash HGM_MG_sample_analyzer.sh MG_SAMPLE.fastq.gz FG_CLUSTER.dmnd
 
 # Multiple samples:
-# for i in ~/ANALYSIS/IBD_cohort/final_samples/*.fastq.gz; do bash ~/HGM_MG_sample_analyzer.sh $i ~/GIF_DBs/ldh_seqs.dmnd; done
+# for SAMPLE in SAMPLES_FOLDER/HGM_MG_sample*.fastq.gz; do bash HGM_MG_sample_analyzer.sh $SAMPLE FG_CLUSTER.dmnd; done
 
 # Input defined variables:
-FQ_SAMPLE=$1  # .fq left reads, .gz compressed: e.g. "SP-099.human.filtered_1.fq.gz" or "SRR5275394_1.fastq.gz"
+FQ_SAMPLE=$1  # .fq left reads, .gz compressed: e.g. "MG_SAMPLE_1.fastq.gz"
 DB=$2         # .dmnd file with refined-protein set DB: e.g. acetolac_seqs_lenfil_fil.dmnd
 # Variables:
 FA_SAMPLE="$(basename "$FQ_SAMPLE" .fastq.gz).faa"        # .fa left reads
